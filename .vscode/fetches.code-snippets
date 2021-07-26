@@ -1,0 +1,48 @@
+{
+  // Place your caipiao-pc-multi-lang 工作区 snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and
+  // description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope
+  // is left empty or omitted, the snippet gets applied to all languages. The prefix is what is
+  // used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+  // $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders.
+  // Placeholders with the same ids are connected.
+  // Example:
+  "Add Fetch Get": {
+    "scope": "javascript,typescript",
+    "prefix": "fget",
+    "body": [
+      "import { get } from '@/fetches/tools';",
+      "import { $1 } from '@/fetches/tools/constants';",
+      "",
+      "/**",
+      " * $2",
+      " */",
+      "export const $TM_FILENAME_BASE = async () => {",
+      "  const json = await get($1);",
+      "",
+      "  return json;",
+      "};",
+      ""
+    ],
+    "description": "添加API基础Get代码"
+  },
+  "Add Fetch Post": {
+    "scope": "javascript,typescript",
+    "prefix": "fpost",
+    "body": [
+      "import { post } from '@/fetches/tools';",
+      "import { $1 } from '@/fetches/tools/constants';",
+      "import { $2 } from '@/fetches/types';",
+      "",
+      "/**",
+      " * $3",
+      " */",
+      "export const $TM_FILENAME_BASE = async (params: $2) => {",
+      "  const json = await post($1, params);",
+      "",
+      "  return json;",
+      "};",
+      ""
+    ],
+    "description": "添加API基础Get代码"
+  }
+}

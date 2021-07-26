@@ -1,0 +1,20 @@
+{
+  "API Types": {
+    "scope": "typescript",
+    "prefix": "apitypes",
+    "body": [
+      "/**",
+      " * ${1: 备注} - 请求参数",
+      " * * 接口地址: /${2: 请求地址}",
+      " */",
+      "export interface I${3:${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}}Request {}",
+      "/**",
+      " * ${1: 备注} - 返回数据",
+      " * * 接口地址: /${2: 请求地址}",
+      " */",
+      "export interface I${3:${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}}Response {}",
+      ""
+    ],
+    "description": "API 接口请求参数和返回数据格式类型定义"
+  }
+}
